@@ -223,7 +223,7 @@ function leaveRoom(socket) {
   socket.data.role = null;
 }
 
-const PORT = process.env.PORT || "https://callwebcam.vercel.app/";
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => {
   console.log(`VideoCall: http://localhost:${PORT}`);
