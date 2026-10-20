@@ -1,0 +1,257 @@
+:root {
+    color-scheme: dark;
+    --bg: #0b0d14;
+    --panel: #151925;
+    --line: #2a3040;
+    --text: #f4f6fb;
+    --muted: #a2abc0;
+    --accent: #a5f36b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top, #1b2540, var(--bg) 65%);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 24px;
+}
+
+.guest-container {
+    max-width: 680px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ffffff18;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand>span {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #111;
+}
+
+.brand small {
+    color: var(--accent);
+    font-size: 10px;
+}
+
+.badge {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.hero {
+    padding: 42px 0 28px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 70px);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 12px 0;
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+.hero>p:last-child,
+.muted {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.panel {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--panel);
+    box-shadow: 0 20px 60px #0003;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 12px 0 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    background: #090c13;
+    color: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+button {
+    padding: 13px 17px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.primary {
+    background: var(--accent);
+    color: #111;
+}
+
+.secondary {
+    background: #293044;
+    color: white;
+}
+
+.danger {
+    background: #54242d;
+    color: #ffdce0;
+}
+
+.link-area {
+    margin-top: 20px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.status {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.guest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.guest-card {
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #090c13;
+}
+
+.guest-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #050609;
+    object-fit: cover;
+}
+
+.guest-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.connection-state {
+    color: var(--muted);
+}
+
+.guest-panel {
+    padding: 26px;
+}
+
+.big-button {
+    width: 100%;
+    min-height: 56px;
+    min-width: 300px;
+    font-size: 17px;
+}
+
+footer {
+    padding: 24px 0;
+    color: #7f899f;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 16px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .status-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

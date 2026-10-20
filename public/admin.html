@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VC — Admin</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="brand" href="/admin"><span>VC</span> VideoCall <small>ADMIN</small></a>
+      <span class="badge">Camera & mic off</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">HOST CONTROL</p>
+      <h1>One link.<br><span>Multiple guests.</span></h1>
+      <p>Admin camera and microphone are never requested.</p>
+    </section>
+
+    <section id="loginPanel" class="panel">
+      <h2>Admin login</h2>
+      <form id="loginForm">
+        <label for="password">Admin password</label>
+        <input id="password" type="password"
+          placeholder="Enter password" required>
+        <button class="primary" type="submit">Sign in</button>
+      </form>
+      <p id="loginStatus" class="status"></p>
+    </section>
+
+    <section id="adminPanel" class="panel hidden">
+      <h2>Admin dashboard</h2>
+      <p class="muted">Generate a link and share it with guests.</p>
+
+      <button id="createBtn" class="primary">
+        Generate guest link
+      </button>
+
+      <div id="linkArea" class="link-area hidden">
+        <label for="inviteLink">Guest link</label>
+        <input id="inviteLink" readonly>
+        <button id="copyBtn" class="secondary">Copy link</button>
+      </div>
+
+      <div class="status-row">
+        <p id="adminStatus" class="status">Ready.</p>
+        <span id="guestCount">0 guests</span>
+      </div>
+
+      <div id="guestGrid" class="guest-grid"></div>
+
+      <button id="endBtn" class="danger hidden">
+        End session
+      </button>
+    </section>
+
+    <footer>VideoCall · Host dashboard</footer>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
